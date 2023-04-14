@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExtractMavenTestResults": {
+      "commandName": "Project",
+      "commandLineArgs": "config.yaml"
+    }
+  }
+}

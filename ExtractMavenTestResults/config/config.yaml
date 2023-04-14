@@ -1,0 +1,29 @@
+﻿# The folder where the search should be done, or from where the search should start
+# eg. the project folder or the src folder, where the components are defines
+rootDirectory:
+
+# If true, it will make a full search of the root directory and subdirectories for the TEST*.xml files
+# Should be used only when you do not know the structure of the directories where the file are
+# This may take longer, as it parses all subdirectories
+# default: false
+fullSearch:
+
+# A list of subdirectories where to search the TEST*.xml files, relative to the root
+# Ignored if fullSearch is set to true
+# Default: is ignored
+subdirectories:
+
+# Standard search -> checks all subdirectories of the current directory for targer/surefire-report folder
+# Ignored if either fullSearch is set to true or subdirectories is not null
+# default: true
+standardSearch:
+
+#output file for the result
+#default is ./result.csv
+output:
+
+# The program will work as follows:
+# If fullSearch is true, then it makes a full search
+# Otherwise, if subdirectories are declared, then it will search there
+# Otherwise, if standardSearch is not set to false it will make a standard search
+# Otherwise it will search for the files in the current directory
