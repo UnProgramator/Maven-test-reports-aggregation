@@ -1,4 +1,10 @@
-﻿# The folder where the search should be done, or from where the search should start
+﻿# The program will work as follows:
+# If fullSearch is true, then it makes a full search
+# Otherwise, if subdirectories are declared, then it will search there
+# Otherwise, if standardSearch is not set to false it will make a standard search
+# Otherwise it will search for the files in the current directory
+
+# The folder where the search should be done, or from where the search should start
 # eg. the project folder or the src folder, where the components are defines
 rootDirectory:
 
@@ -21,9 +27,3 @@ standardSearch:
 #output file for the result
 #default is ./result.csv
 output:
-
-# The program will work as follows:
-# If fullSearch is true, then it makes a full search
-# Otherwise, if subdirectories are declared, then it will search there
-# Otherwise, if standardSearch is not set to false it will make a standard search
-# Otherwise it will search for the files in the current directory
