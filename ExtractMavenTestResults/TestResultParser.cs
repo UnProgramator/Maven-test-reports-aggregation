@@ -29,6 +29,8 @@ class TestResultParser
             elem.failures   = int.Parse(atribs["failures"].InnerText);
             elem.time       = double.Parse(atribs["time"].InnerText, CultureInfo.InvariantCulture);
 
+            elem.generateCandidateName();
+
             if (display)
                 Console.WriteLine(elem.toString());
 
