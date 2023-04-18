@@ -8,7 +8,7 @@ class Program
 
         List<Model> results = DirectorySearches.agregateTestResults();
 
-        FileSerializer.writeCsv(results, "result.csv");
+        FileSerializer.writeCsv(results, ProjectConfig.getConfig().output);
     }
 }
 

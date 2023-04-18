@@ -12,13 +12,18 @@ class ProjectConfig
 
     public string output { get; set; }
 
+    private static ProjectConfig? _instance;
+
     public static ProjectConfig getConfig()
     {
-        ProjectConfig config = FileSerializer.readYaml<ProjectConfig>(Config.getInstance().configFilename);
+        if (_instance == null)
+        {
+            _instance = FileSerializer.readYaml<ProjectConfig>(Config.getInstance().configFilename);
 
-        config.validate();
+            _instance.validate();
+        }
 
-        return config;
+        return _instance;
     }
 
     private void validate()
